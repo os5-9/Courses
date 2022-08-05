@@ -1,7 +1,7 @@
 from selenium import webdriver
-import math
-from selenium.webdriver.common.by import By
 
+from selenium.webdriver.common.by import By
+import math
 
 def calc(z):
   return str(math.log(abs(12*math.sin(int(z)))))
@@ -21,3 +21,4 @@ answer_box.send_keys(answer)
 driver.find_element(By.CSS_SELECTOR, "[for='robotCheckbox']").click()
 driver.find_element(By.CSS_SELECTOR, "[for='robotsRule']").click()
 driver.find_element(By.CSS_SELECTOR, "[type='submit']").click()
+driver.quit()

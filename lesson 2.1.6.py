@@ -15,3 +15,4 @@ print(people_radio.get_attribute("checked"))
 
 print(people_radio.get_attribute("href"))
 # Напечатает None, т.к. аттрибут не существует. И это не строка а None-значение.
+driver.quit()
