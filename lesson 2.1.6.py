@@ -1,9 +1,10 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome()
 driver.get("http://suninjuly.github.io/math.html")
 
-people_radio = driver.find_element_by_id("peopleRule")
+people_radio = driver.find_element(By.ID, "peopleRule")
 
 print(people_radio.get_attribute("name"))
 # Напечатает ruler, т.е. текстовое значение аттрибута
