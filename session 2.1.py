@@ -11,10 +11,8 @@ driver.get("https://suninjuly.github.io/math.html")
 
 x_element = driver.find_element_by_id("input_value")
 x = x_element.text
-print("x = " + x)
 
 answer = calc(x)
-print("the answer is " + str(answer))
 
 answer_box = driver.find_element_by_id("answer")
 answer_box.send_keys(answer)
