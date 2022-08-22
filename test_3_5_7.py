@@ -40,6 +40,7 @@ class TestBookPage:
         print("\n5")
         assert True
 
+
     # номер 6
     @pytest.mark.regression
     def test_guest_can_see_book_price(self):
