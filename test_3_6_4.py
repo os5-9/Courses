@@ -20,11 +20,11 @@ def test_func1(driver, link):
     area = WebDriverWait(driver, 10).until(ec.element_to_be_clickable((By.TAG_NAME, 'textarea')))
     area.send_keys(answer)
     btn = driver.find_element(By.CLASS_NAME, "submit-submission")
-    if btn.get_attribute("disabled") is None:
-        btn.click()
-    else:
-        time.sleep(6)
-        btn.click()
+    counter = 0
+    while btn.get_attribute("disabled") is not None and counter < 30:
+        counter = counter + 1
+        time.sleep(1)
+    btn.click()
     time.sleep(2)
     print(driver.find_element(By.TAG_NAME, "p").text)
     assert True, "not true"
